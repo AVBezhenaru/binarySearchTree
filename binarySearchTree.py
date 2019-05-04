@@ -120,9 +120,13 @@ class BST:
         replaceNode.Parent.LeftChild = None
 
 
-    def Count(self, count = []):
+    def Count(self, count = None):
+
+        if count is None:
+            result = []
+
         node = self.Root
-        count.append(node.NodeKey)
+        result.append(node.NodeKey)
 
         if node.LeftChild:
             lnode = BST(node.LeftChild)
@@ -132,4 +136,5 @@ class BST:
             rnode = BST(node.RightChild)
             rnode.Count()
 
-        return len(count)
+        count = None
+        return len(result)

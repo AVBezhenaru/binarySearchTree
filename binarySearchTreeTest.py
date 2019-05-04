@@ -70,3 +70,5 @@ tree.DeleteNodeByKey(14)
 # print(nd.Node.NodeValue)
 
 print(tree.Count())
+print(tree.Count())
+print(tree.Count())
