@@ -1,6 +1,4 @@
-
-
-
+from binarySearchTree import *
 
 node_0 = BSTNode(0, 0, None)
 node_1 = BSTNode(1, 1, None)
@@ -62,6 +60,13 @@ print(tree.AddKeyValue(3, 3))
 
 # nd = tree.FindNodeByKey(3)
 tree.DeleteNodeByKey(15)
+tree.DeleteNodeByKey(12)
+tree.DeleteNodeByKey(4)
+tree.DeleteNodeByKey(2)
+tree.DeleteNodeByKey(7)
+tree.DeleteNodeByKey(14)
+# tree.DeleteNodeByKey(8)
+
 # print(nd.Node.NodeValue)
 
 print(tree.Count())

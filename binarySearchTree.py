@@ -132,4 +132,4 @@ class BST:
             rnode = BST(node.RightChild)
             rnode.Count()
 
-        return count
+        return len(count)
