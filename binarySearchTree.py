@@ -106,8 +106,13 @@ class BST:
         elif left and right is None:
             replaceNode = left
 
-        else:
+        elif right and left is None:
             replaceNode = right
+
+        else:
+            deleteNode.Node.Parent.LeftChild = None
+            deleteNode.Node.Parent.RightChild = None
+            return
 
         deleteNode.Node.NodeValue = replaceNode.NodeValue
         deleteNode.Node.NodeKey = replaceNode.NodeKey

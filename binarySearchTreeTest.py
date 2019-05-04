@@ -1,5 +1,7 @@
 
 
+
+
 node_0 = BSTNode(0, 0, None)
 node_1 = BSTNode(1, 1, None)
 node_3 = BSTNode(3, 3, None)
@@ -59,7 +61,7 @@ print(tree.AddKeyValue(3, 3))
 # print(tree.Root.RightChild.RightChild.LeftChild.NodeKey)
 
 # nd = tree.FindNodeByKey(3)
-tree.DeleteNodeByKey(12)
+tree.DeleteNodeByKey(15)
 # print(nd.Node.NodeValue)
 
 print(tree.Count())
