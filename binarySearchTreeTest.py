@@ -59,15 +59,18 @@ print(tree.AddKeyValue(3, 3))
 # print(tree.Root.RightChild.RightChild.LeftChild.NodeKey)
 
 # nd = tree.FindNodeByKey(3)
-tree.DeleteNodeByKey(15)
-tree.DeleteNodeByKey(12)
-tree.DeleteNodeByKey(4)
-tree.DeleteNodeByKey(2)
-tree.DeleteNodeByKey(7)
-tree.DeleteNodeByKey(14)
+# tree.DeleteNodeByKey(15)
+# tree.DeleteNodeByKey(12)
+# tree.DeleteNodeByKey(4)
+# tree.DeleteNodeByKey(2)
+# tree.DeleteNodeByKey(7)
+# tree.DeleteNodeByKey(14)
 # tree.DeleteNodeByKey(8)
-
 # print(nd.Node.NodeValue)
+
+# print(tree.getAllNodes())
+
+
 
 print(tree.Count())
 print(tree.Count())
