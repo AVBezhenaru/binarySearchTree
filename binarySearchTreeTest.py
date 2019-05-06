@@ -36,21 +36,22 @@ node_12.LeftChild = node_10
 node_12.RightChild = node_14
 
 
-print(tree.AddKeyValue(1, 1))
-print(tree.AddKeyValue(11, 11))
-print(tree.AddKeyValue(13, 13))
+# print(tree.AddKeyValue(1, 1))
+# print(tree.AddKeyValue(11, 11))
+# print(tree.AddKeyValue(13, 13))
 # print(tree.AddKeyValue(6, 6))
-
+# #
 # print(tree.AddKeyValue(5, 5))
-print(tree.AddKeyValue(7, 7))
-print(tree.AddKeyValue(15, 15))
-print(tree.AddKeyValue(3, 3))
-# print(tree.AddKeyValue(5, 5))
-print(tree.AddKeyValue(9, 9))
+# print(tree.AddKeyValue(7, 7))
+# print(tree.AddKeyValue(15, 15))
+# print(tree.AddKeyValue(3, 3))
+# # print(tree.AddKeyValue(5, 5))
+# print(tree.AddKeyValue(9, 9))
 # # print()
-# print(tree.FindNodeByKey(9).Node.Parent.NodeKey)
+print("FIND NODE",tree.FindNodeByKey(3).Node.NodeKey)
+print("ADD",tree.FindNodeByKey(3).ToLeft)
 
-print("min tree", tree.FinMinMax(8, False))
+# print("min tree", tree.FinMinMax(8, False))
 
 # print(node_4.RightChild.NodeValue)
 

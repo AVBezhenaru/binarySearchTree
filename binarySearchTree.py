@@ -23,33 +23,28 @@ class BST:
         self.Root = node  # корень дерева, или None
 
     def FindNodeByKey(self, key):
-        node = self.Root
-        bsTFind = BSTFind()
+        node = BSTFind()
+        node.Node = self.Root
 
-        if key == node.NodeKey:
-            bsTFind.Node = node
-            bsTFind.NodeHasKey = True
-            bsTFind.ToLeft = False
+        if key == node.Node.NodeKey:
+            node.NodeHasKey = True
 
-        elif key > node.NodeKey and node.RightChild is None:
-            bsTFind.Node = node
-            bsTFind.NodeHasKey = False
-            bsTFind.ToLeft = False
+        else:
+            if key > node.Node.NodeKey:
+                if node.Node.RightChild:
+                    node = BST(node.Node.RightChild)
+                    return node.FindNodeByKey(key)
 
-        elif key < node.NodeKey and node.LeftChild is None:
-            bsTFind.Node = node
-            bsTFind.NodeHasKey = False
-            bsTFind.ToLeft = True
+            else:
+                if node.Node.LeftChild:
+                    node = BST(node.Node.LeftChild)
+                    return node.FindNodeByKey(key)
 
-        elif key < node.NodeKey:
-            node = BST(node.LeftChild)
-            return node.FindNodeByKey(key)
+                else:
+                    node.ToLeft = True
 
-        elif key > node.NodeKey:
-            node = BST(node.RightChild)
-            return node.FindNodeByKey(key)
+        return node
 
-        return bsTFind
 
     def AddKeyValue(self, key, val):
         node = self.FindNodeByKey(key)
@@ -70,6 +65,7 @@ class BST:
 
     def FinMinMax(self, FromNode, Findmax):
         findNode = self.FindNodeByKey(FromNode)
+        print("find node", findNode)
         node = findNode.Node
 
         if Findmax:
