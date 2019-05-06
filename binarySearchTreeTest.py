@@ -46,11 +46,11 @@ print(tree.AddKeyValue(7, 7))
 print(tree.AddKeyValue(15, 15))
 print(tree.AddKeyValue(3, 3))
 # print(tree.AddKeyValue(5, 5))
-# print(tree.AddKeyValue(9, 9))
+print(tree.AddKeyValue(9, 9))
 # # print()
 # print(tree.FindNodeByKey(9).Node.Parent.NodeKey)
 
-# print("min tree", tree.FinMinMax(10, False))
+print("min tree", tree.FinMinMax(8, False))
 
 # print(node_4.RightChild.NodeValue)
 

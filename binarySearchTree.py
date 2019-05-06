@@ -72,21 +72,14 @@ class BST:
         findNode = self.FindNodeByKey(FromNode)
         node = findNode.Node
 
-        if Findmax is True:
-            if node.RightChild is None:
-                return node.NodeKey
+        if Findmax:
+            while node.RightChild:
+                node = node.RightChild
+        else:
+            while node.LeftChild:
+                node = node.LeftChild
 
-            else:
-                node = BST(node.RightChild)
-                return node.FinMinMax(node.Root.NodeKey, True)
-
-        if Findmax is False:
-            if node.LeftChild is None:
-                return node.NodeKey
-
-            else:
-                node = BST(node.LeftChild)
-                return node.FinMinMax(node.Root.NodeKey, False)
+        return node.NodeKey
 
     def DeleteNodeByKey(self, key):
         deleteNode = self.FindNodeByKey(key)
