@@ -42,16 +42,18 @@ node_12.RightChild = node_14
 # print(tree.AddKeyValue(6, 6))
 # #
 # print(tree.AddKeyValue(5, 5))
+# print(tree.AddKeyValue(5, 5))
+# print(tree.AddKeyValue(5, 5))
 # print(tree.AddKeyValue(7, 7))
 # print(tree.AddKeyValue(15, 15))
-# print(tree.AddKeyValue(3, 3))
+# # print(tree.AddKeyValue(3, 3))
 # # print(tree.AddKeyValue(5, 5))
 # print(tree.AddKeyValue(9, 9))
 # # print()
-print("FIND NODE",tree.FindNodeByKey(3).Node.NodeKey)
+print("FIND NODE",tree.FindNodeByKey(2).Node.NodeKey)
 print("ADD",tree.FindNodeByKey(3).ToLeft)
 
-# print("min tree", tree.FinMinMax(8, False))
+print("min tree", tree.FinMinMax(node_8, False))
 
 # print(node_4.RightChild.NodeValue)
 
@@ -65,9 +67,9 @@ print("ADD",tree.FindNodeByKey(3).ToLeft)
 # tree.DeleteNodeByKey(4)
 # tree.DeleteNodeByKey(2)
 # tree.DeleteNodeByKey(7)
-# tree.DeleteNodeByKey(14)
-# tree.DeleteNodeByKey(8)
-# print(nd.Node.NodeValue)
+# tree.DeleteNodeByKey(4)
+tree.DeleteNodeByKey(8)
+# # print(nd.Node.NodeValue)
 
 # print(tree.getAllNodes())
 
@@ -76,3 +78,5 @@ print("ADD",tree.FindNodeByKey(3).ToLeft)
 print(tree.Count())
 print(tree.Count())
 print(tree.Count())
+
+print("FIND NODE",tree.FindNodeByKey(2).Node.NodeKey)

@@ -29,19 +29,18 @@ class BST:
         if key == node.Node.NodeKey:
             node.NodeHasKey = True
 
+        elif key > node.Node.NodeKey:
+            if node.Node.RightChild:
+                node = BST(node.Node.RightChild)
+                return node.FindNodeByKey(key)
+
         else:
-            if key > node.Node.NodeKey:
-                if node.Node.RightChild:
-                    node = BST(node.Node.RightChild)
-                    return node.FindNodeByKey(key)
 
+            if node.Node.LeftChild:
+                node = BST(node.Node.LeftChild)
+                return node.FindNodeByKey(key)
             else:
-                if node.Node.LeftChild:
-                    node = BST(node.Node.LeftChild)
-                    return node.FindNodeByKey(key)
-
-                else:
-                    node.ToLeft = True
+                node.ToLeft = True
 
         return node
 
@@ -64,13 +63,15 @@ class BST:
 
 
     def FinMinMax(self, FromNode, Findmax):
-        findNode = self.FindNodeByKey(FromNode)
-        print("find node", findNode)
-        node = findNode.Node
+        node = FromNode
+
+        if node is None:
+            return None
 
         if Findmax:
             while node.RightChild:
                 node = node.RightChild
+
         else:
             while node.LeftChild:
                 node = node.LeftChild
@@ -83,7 +84,7 @@ class BST:
         right = deleteNode.Node.RightChild
 
         if left and right:
-            replaceKey = self.FinMinMax(right.NodeKey, False)
+            replaceKey = self.FinMinMax(right, False)
             replaceNode = self.FindNodeByKey(replaceKey)
 
             if replaceNode.Node.RightChild:
